@@ -1,0 +1,128 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center ;
+}
+.container {
+    position: relative;
+    height: 550px;
+    width: 500px;
+    padding: 30px 50px;
+    border-radius: 15px;
+ 
+    box-shadow: 25px 25px 75px rgba(255, 255, 255, 0.25), 
+                10px 10px 70px rgba(151, 86, 216, 0.25),
+                inset 5px 5px 10px rgba(159, 119, 222, 0.5),
+                inset 5px 5px 20px rgba(122, 94, 234, 0.2),
+                inset -5px -5px 15px rgba(181, 115, 216, 0);
+    background: transparent;
+    backdrop-filter: blur(6px);
+    border: .5px solid rgb(63, 235, 247);
+}
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: rgb(252, 255, 255);
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: 600;
+    font-size: 50px;
+}
+.text {
+    font-family: 'Patrick Hand', cursive,monospace;
+    font-weight: 600;
+    font-size: 25px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1px 15px ;
+    border-radius: 30px;   
+}
+.task-list {
+    margin-top: 20px;
+    max-height: 325px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.task {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    width: 270px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 0px 10px;
+    margin-bottom: 7px;
+    border-radius: 30px;
+}
+.task-complete {
+    text-decoration: line-through;
+    background-color:rgb(16, 214, 240);
+}
+.task-checkbox {
+    background-color: rgba(75, 248, 248, 0.936);
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 277px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+.task-checkbox-tick::before {
+    content: "\2713";
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
+.dlt {
+    position: absolute; 
+    left: 295px;
+    font-size: 1.1rem;
+    padding: 6px 15px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: rgba(55, 78, 103, 0.402);
+    color: rgb(0, 0, 0);
+    font-family: 'Patrick Hand', cursive;
+    transition: all .3s ;
+    font-weight: bold;
+}
+.dlt:hover {
+    color: rgb(255, 255, 255);
+    background-color:rgb(106, 7, 245);
+    font-size: 1.3rem;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(54, 46, 139);
+}
+
+@media screen and (max-width:500px) {
+
+    .task{
+        margin-bottom: 10px;
+    }
+    .dlt {
+        position: absolute; 
+        left: 227px;
+        background-color: rgb(28, 61, 95)
+    }
+}
+
